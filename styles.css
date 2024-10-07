@@ -1,7 +1,6 @@
 * {
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
-
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -34,9 +33,10 @@ nav a {
 
 nav a[aria-current='page'] {
   color: white;
-  background-color: #d4d4d4;
+  background-color: black;
   font-style: normal ;
 }
+
 
 
 main {
