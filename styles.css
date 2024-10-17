@@ -76,3 +76,34 @@ p{
   justify-content: center;
   margin-top: 2rem;
 }
+
+.ytvid {
+  display:flex;
+  flex-direction:column;
+
+}
+
+
+.HomePageGrid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+#item1 {
+  padding: 1rem;
+  background-color: white;
+  align-items: left;
+  border-radius: 15px;
+}
+#item2 {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 15px;
+}
+#item3 {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 15px;
+}
