@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Music Biggest Hits</title>
-    <meta charset="UTF-8" />
-    <meta name="description"> " A site that shows top artists, biggest concerts, and etc." </meta>
-    <!--
+
+<head>
+  <script src="https://kit.fontawesome.com/3d037c148d.js" crossorigin="anonymous"></script>
+  <title>Music Biggest Hits</title>
+  <meta charset="UTF-8" />
+  <meta name="description"> " A site that shows top artists, biggest concerts, and etc." </meta>
+  <!--
       Need a visual blank slate?
       Remove all code in `styles.css`!
     -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-    <link rel="icon" href="/images/favicon.ico">
-  </head>
-  <body>
-    <nav>
-      <a  href="/">Home</a>
-      <a href="/page2.html"aria-current="page">Other page</a>
-    </nav>
-    <main>
-      <h1>Home of Top Music</h1>
-      <div style="display: flex; justify-content: center;">
-        <img src="images/musicsymbol.jpg" height="300">
-        <div class="ytvid">
-          <iframe src="https://www.youtube.com/embed/U0ZoqmyGJo8?si=tV1KDoY7-p7Ff-Fz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <iframe src="https://www.youtube.com/embed/zMC_WvcCo0k?si=PXDAz12bYifZSKPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>  
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="script.js"></script>
+  <link rel="icon" href="/images/favicon.ico">
+</head>
+
+<body>
+  <nav>
+    <h1>Top Music</h1>
+    <div class="button"></div>
+    <div class="dropdown">
+       <button class="dropdown-button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/">Home</a>
+        <a href="/page2.html" aria-current="page">Other page</a>
+      </div></div>
+  </nav>
+  <main>
+    <div style="display: flex; justify-content: center;">
+      <img src="images/musicsymbol.jpg" height="300">
+      <div class="ytvid">
+        <iframe src="https://www.youtube.com/embed/U0ZoqmyGJo8?si=tV1KDoY7-p7Ff-Fz" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/zMC_WvcCo0k?si=PXDAz12bYifZSKPk" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <p>Music is life. Music brings families, friends and people together from differnt culture. Music in a way shapes society.</p>
-      <div>
-      <ul>
-        <li>check out artists</li>
-        <li>listen to their biggest hits</li>
-        <li>watch music videos</li>
-        <li>look at their concerts</li>
-      </ul>
-      <a href="https://kworb.net/spotify/listeners.html">kworb</a>
     </div>
+    <p>Music is life. Music brings families, friends and people together from differnt culture. Music in a way shapes
+      society.</p>
     <div class="HomePageGrid">
       <div id="item1">Artist </div>
       <div id="item2">Music Videos </div>
       <div id="item3">Concerts</div>
     </div>
-    </main>
-  </body>
+  </main>
+</body>
+
 </html>
