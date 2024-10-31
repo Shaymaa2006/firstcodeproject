@@ -29,12 +29,13 @@ nav a {
   border: solid 1px black;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: white;
+  background-color: rgb(48, 47, 47);
 }
 
-nav a[aria-current="page"] {
-  color: white;
-  background-color: black;
+nav a:hover {
+  background-color: white;
+  color: black;
 }
 
 main {
@@ -131,7 +132,7 @@ p {
   display: none;
   position: absolute;
   right: 0px;
-  background-color: white;
+  /* background-color: white; */
   min-width: 160px;
   box-shadow: 0px, 8px, 16px, 0px rgba(0, 0, 0, 0, 2)
 }
