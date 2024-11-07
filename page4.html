@@ -3,8 +3,34 @@
 
 <head>
     <title>Concerts</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body></body>
+<body>
+    <form class="form">
+        <label>
+          Name: <input type="text" required>
+        </label>
+        <label>
+          Email: <input type="text" name="email" id="email" required>
+        </label>
+        <label>
+          Message: <textarea style="width:80%" rows=1></textarea>
+        </label>
+        <label>
+          Opt in to emails <input type="checkbox" />
+        </label>
+        <label>
+            Have you ever been to a concert? <input type="select" />
+        </label>
+        <input type="submit" style="width:20%" onclick="formsubmission()" />
+     </form>
+     <script>
+        function formsubmission() {
+            alert("The form was succesfully submitted");
+        }
+     </script>
+    </main>
+</body>
 
 </html>
