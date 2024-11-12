@@ -3,8 +3,51 @@
 
 <head>
     <title>Concerts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <link rel="icon" href="/images/favicon.ico">
 </head>
 
-<body></body>
+<body>
+  <nav>
+    <h1>Concerts</h1>
+    <div class="button"></div>
+    <div class="dropdown">
+       <button class="dropdown-button">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/">Home</a>
+        <a href="/page2.html" aria-current="page">Artists</a>
+        <a href="/page3.html" aria-current="page">Music Videos</a>
+      </div></div>
+  </nav>
+    <form class="form">
+        <label>
+          Name: <input type="text" required>
+        </label>
+        <label>
+          Email: <input type="text" name="email" id="email" required>
+        </label>
+        <label>
+          Message: <textarea style="width:80%" rows=1></textarea>
+        </label>
+        <label>
+          Opt in to emails <input type="checkbox" />
+        </label>
+        <label for="concerts">Have you been to a concert?</label>
+          <select name="concerts" id="concerts">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <input id="submitbutton" type="submit" style="width:20%" onclick="formsubmission()" />
+     </form>
+     <script>
+        function formsubmission() {
+           alert(`You clicked ${document.getElementById("submitbutton").textContnet}`)
+        }
+     </script>
+    </main>
+</body>
 
 </html>
