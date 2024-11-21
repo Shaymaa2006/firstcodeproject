@@ -21,6 +21,26 @@
         <a href="/page2.html" aria-current="page">Artists</a>
         <a href="/page3.html" aria-current="page">Music Videos</a>
       </div></div>
+      <div>
+        <label>Dark Mode
+            <input type="checkbox" onchange="toggleDarkMode()"></input>
+        </label>
+        <script>
+            let isDarkMode = false;
+            const body= document.body
+    
+            const toggleDarkMode = () =>  {
+                console.log("Using dark mode: " + isDarkMode);
+                if (isDarkMode) {
+                    body.style["backgroundColor"] = "white";
+                    body.style["color"] = "black";
+                } else {
+                    body.style["backgroundColor"] = "black";
+                    body.style["color"] = "white";
+                }
+            }
+        </script>
+    </div>
   </nav>
     <form class="form">
         <label>
@@ -47,6 +67,23 @@
            alert(`You clicked ${document.getElementById("submitbutton").textContnet}`)
         }
      </script>
+     <table id="table">
+      <thead>
+        <tr>
+          <td><b>Name</b></td>
+          <td><b>Food</b></td>
+          <td><b>Stars</b></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dumpling House</td>
+          <td>Chinese</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+
+     </table>
     </main>
 </body>
 

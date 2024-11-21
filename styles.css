@@ -149,3 +149,9 @@ p {
   padding: 1rem;
 
 }
+
+table{
+  padding:2rem;
+  border-spacing: 1rem;
+  flex-direction: row;
+}
