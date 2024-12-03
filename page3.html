@@ -18,10 +18,73 @@
           </button>
           <div class="dropdown-content">
             <a href="index.html" aria-current="page">Home</a>
-            <a href="/page2.html" aria-current="page">Artists</a>
-            <a href="/page4.html" aria-current="page">Concerts</a>
+            <a href="/page2.html" aria-current="page">Concerts</a>
+            <a href="/page4.html" aria-current="page">Final Thoughts</a>
           </div></div>
-      </nav>
+        </nav>
+        <form class="form">
+        <label for="Music Videos">Select a type of music genre:</label>
+          <select name="Music Videoes" id="Music Videos">
+          <option value="Alternative">Alternative</option>
+          <option value="Pop">pop</option>
+          <option value="Hip Hop">Hip hop</option>
+          </select>
+          <main> 
+            <table id="table">
+              <thead>
+                <tr>
+                  <td><b>Name</b></td>
+                  <td><b>Artist</b></td>
+                  <td><b>Views</b></td>
+                </tr>
+              </thead>
+              <tbody></tbody>
+              </table>
+
+           <script>
+            const MusicVideos =[
+            {
+              SongName: "Despacito",
+              Artist: "luis Fonsi",
+              Views: "2,993,700,000",
+            },{
+              SongName:"Sorry (PURPOSE : The Movement)",
+              Artist: "Justin Bieber",
+              Views:"3,883,543,678",
+            },
+            ];
+            console.log(MusicVideos);
+
+            const writeTableRow = (table, MusicVideos) => {
+                const newRow = table.insertRow();
+
+            newRow.innerHTML = `<tr id =${MusicVideos.name}>
+                <td>${MusicVideos.SongName}</td>
+                <td>${MusicVideos.Artist}</td>
+                <td>${MusicVideos.Views}</td>
+              </tr>`;
+            }
+
+            const makeTable = () => {
+              const tableBody = document.getElementsByTagName("tbody")[0];
+              tableBody.innerHTML = "";
+              if (select.value == "all") {
+              MusicVideos.forEach((row) => {
+                writeTableRow(tableBody,row);
+              })
+            } else {
+              const filtered = MusicVideos.filter((r) => { r.type ==select.value})
+              filtered.foreach((r) => {
+                
+              })
+              console.log(filtered)
+            }
+            makeTable()
+            
+            
+          
+           </script>
+          </main>
 </body>
 
 </html>
