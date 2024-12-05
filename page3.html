@@ -25,9 +25,9 @@
         <form class="form">
         <label for="Music Videos">Select a type of music genre:</label>
           <select name="Music Videoes" id="Music Videos">
-          <option value="Alternative">Alternative</option>
-          <option value="Pop">pop</option>
-          <option value="Hip Hop">Hip hop</option>
+          <option value="all">All</option>
+          <option value="pop">Pop</option>
+          <option value="hip hop">Hip hop</option>
           </select>
           <main> 
             <table id="table">
@@ -35,23 +35,45 @@
                 <tr>
                   <td><b>Name</b></td>
                   <td><b>Artist</b></td>
+                  <td><b>Type</b></td>
                   <td><b>Views</b></td>
                 </tr>
               </thead>
               <tbody></tbody>
               </table>
+              <div>
+                <select id="Music Videos" onchange="makeTable()"></select>"
+              </div>
 
            <script>
+            const MusicVideos =["all","pop", "hip hop",];
+            const select = document.getElementById("stores");
+            MusicVideos.forEach((type) =>{
+              option = document.createElement("option");
+              option.value = Type;
+              option.text = Type;
+              select.appendChild(option);
+            })
+            </script>
+
+            <script>
             const MusicVideos =[
             {
               SongName: "Despacito",
               Artist: "luis Fonsi",
+              Type:"pop",
               Views: "2,993,700,000",
             },{
               SongName:"Sorry (PURPOSE : The Movement)",
               Artist: "Justin Bieber",
+              Type:"pop",
               Views:"3,883,543,678",
-            },
+            },{
+              SongName: "See You Again",
+              Artist: "Wiz Khalifa ft. Charlie puth",
+              Type:"hip hop",
+              Views: "6,487,976,583 ", 
+            }
             ];
             console.log(MusicVideos);
 
@@ -61,26 +83,24 @@
             newRow.innerHTML = `<tr id =${MusicVideos.name}>
                 <td>${MusicVideos.SongName}</td>
                 <td>${MusicVideos.Artist}</td>
+                <td>${MusicVideos.Type}</td>
                 <td>${MusicVideos.Views}</td>
               </tr>`;
             }
+            // const select= document.getElementById("Music Videos")
 
             const makeTable = () => {
               const tableBody = document.getElementsByTagName("tbody")[0];
               tableBody.innerHTML = "";
               if (select.value == "all") {
-              MusicVideos.forEach((row) => {
-                writeTableRow(tableBody,row);
-              })
+              MusicVideos.forEach((r) => writeTableRow(tableBody,r));
             } else {
-              const filtered = MusicVideos.filter((r) => { r.type ==select.value})
-              filtered.foreach((r) => {
-                
-              })
-              console.log(filtered)
+              const filtered = MusicVideos.filter((r) => select.value = r.Type)
+              filtered.foreach((r) => writeTableRow(tableBody, r))
+              console.log(filtered);
             }
-            makeTable()
-            
+          }
+          makeTable()
             
           
            </script>
