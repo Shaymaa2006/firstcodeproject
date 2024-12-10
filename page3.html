@@ -23,11 +23,8 @@
           </div></div>
         </nav>
         <form class="form">
-        <label for="Music Videos">Select a type of music genre:</label>
-          <select name="Music Videoes" id="Music Videos">
-          <option value="all">All</option>
-          <option value="pop">Pop</option>
-          <option value="hip hop">Hip hop</option>
+        <label for="MusicVideos">Select a type of music genre:</label>
+          <select name="MusicVideos" id="MusicVideos" onchange="makeTable()">
           </select>
           <main> 
             <table id="table">
@@ -41,37 +38,35 @@
               </thead>
               <tbody></tbody>
               </table>
-              <div>
-                <select id="Music Videos" onchange="makeTable()"></select>"
-              </div>
+              
 
            <script>
-            const MusicVideos =["all","pop", "hip hop",];
-            const select = document.getElementById("stores");
+            const MusicVideos =["All","Pop","Hip Hop",];
+            const select = document.getElementById("MusicVideos");
             MusicVideos.forEach((type) =>{
               option = document.createElement("option");
-              option.value = Type;
-              option.text = Type;
+              option.value = type;
+              option.text = type;
               select.appendChild(option);
             })
             </script>
 
             <script>
-            const MusicVideos =[
+            const MusicVideosData =[
             {
               SongName: "Despacito",
               Artist: "luis Fonsi",
-              Type:"pop",
+              Type:"Pop",
               Views: "2,993,700,000",
             },{
               SongName:"Sorry (PURPOSE : The Movement)",
               Artist: "Justin Bieber",
-              Type:"pop",
+              Type:"Pop",
               Views:"3,883,543,678",
             },{
               SongName: "See You Again",
               Artist: "Wiz Khalifa ft. Charlie puth",
-              Type:"hip hop",
+              Type:"Hip Hop",
               Views: "6,487,976,583 ", 
             }
             ];
@@ -92,11 +87,11 @@
             const makeTable = () => {
               const tableBody = document.getElementsByTagName("tbody")[0];
               tableBody.innerHTML = "";
-              if (select.value == "all") {
-              MusicVideos.forEach((r) => writeTableRow(tableBody,r));
+              if (select.value == "All") {
+              MusicVideosData.forEach((r) => writeTableRow(tableBody,r));
             } else {
-              const filtered = MusicVideos.filter((r) => select.value = r.Type)
-              filtered.foreach((r) => writeTableRow(tableBody, r))
+              const filtered = MusicVideosData.filter((r) => select.value == r.Type)
+              filtered.forEach((r) => writeTableRow(tableBody, r))
               console.log(filtered);
             }
           }
