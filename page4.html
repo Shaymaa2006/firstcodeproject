@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Concerts</title>
+    <title>Final Thoughts</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
     <link rel="icon" href="/images/favicon.ico">
@@ -10,7 +10,7 @@
 
 <body>
   <nav>
-    <h1>Concerts</h1>
+    <h1>Final Thoughts</h1>
     <div class="button"></div>
     <div class="dropdown">
        <button class="dropdown-button">
@@ -18,9 +18,29 @@
       </button>
       <div class="dropdown-content">
         <a href="/">Home</a>
-        <a href="/page2.html" aria-current="page">Artists</a>
+        <a href="/page2.html" aria-current="page">Concerts</a>
         <a href="/page3.html" aria-current="page">Music Videos</a>
       </div></div>
+      <div>
+        <label>Dark Mode
+            <input type="checkbox" onchange="toggleDarkMode()"></input>
+        </label>
+        <script>
+            let isDarkMode = false;
+            const body= document.body
+    
+            const toggleDarkMode = () =>  {
+                console.log("Using dark mode: " + isDarkMode);
+                if (isDarkMode) {
+                    body.style["backgroundColor"] = "white";
+                    body.style["color"] = "black";
+                } else {
+                    body.style["backgroundColor"] = "black";
+                    body.style["color"] = "white";
+                }
+            }
+        </script>
+    </div>
   </nav>
     <form class="form">
         <label>
@@ -35,8 +55,8 @@
         <label>
           Opt in to emails <input type="checkbox" />
         </label>
-        <label for="concerts">Have you been to a concert?</label>
-          <select name="concerts" id="concerts">
+        <label for="Final Thoughts">Did you enjoy this site?</label>
+          <select name="Final Thoughts" id="Final Thoughts">
           <option value="Yes">Yes</option>
           <option value="No">No</option>
         </select>
