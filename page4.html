@@ -24,20 +24,21 @@
       <div>
         <label>Dark Mode
             <input type="checkbox" onchange="toggleDarkMode()"></input>
-        </label>
-        <script>
+        </label> 
+         <script>
             let isDarkMode = false;
             const body= document.body
     
             const toggleDarkMode = () =>  {
                 console.log("Using dark mode: " + isDarkMode);
                 if (isDarkMode) {
-                    body.style["backgroundColor"] = "white";
+                    body.style["backgroundColor"] = "#cc9ce2";
                     body.style["color"] = "black";
                 } else {
                     body.style["backgroundColor"] = "black";
                     body.style["color"] = "white";
                 }
+                isDarkMode = !isDarkMode
             }
         </script>
     </div>

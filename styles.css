@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: rgb(5, 5, 5);
-  background-color: rgb(203, 178, 214)
+  background-color: #cc9ce2
 }
 
 nav {
@@ -61,19 +61,16 @@ p {
 
 #item1 {
   padding: 1rem;
-  background-color: white;
   border-radius: 15px;
 }
 
 #item2 {
   padding: 1rem;
-  background-color: white;
   border-radius: 15px;
 }
 
 #item3 {
   padding: 1rem;
-  background-color: white;
   border-radius: 15px;
 }
 
@@ -87,32 +84,6 @@ p {
   display: flex;
   flex-direction: column;
 
-}
-
-.HomePageGrid {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-radius: 15px;
-}
-
-#item1 {
-  padding: 1rem;
-  background-color: white;
-  align-items: left;
-  border-radius: 15px;
-}
-
-#item2 {
-  padding: 1rem;
-  background-color: white;
-  border-radius: 15px;
-}
-
-#item3 {
-  padding: 1rem;
-  background-color: white;
-  border-radius: 15px;
 }
 
 .dropdown {
