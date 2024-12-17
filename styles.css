@@ -55,22 +55,22 @@ p {
 .OtherPageGrid {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   border-radius: 15px;
 }
 
 #item1 {
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 15px;
 }
 
 #item2 {
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 15px;
 }
 
 #item3 {
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 15px;
 }
 
